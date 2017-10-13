@@ -54,5 +54,3 @@ function loadAPIClientInterfaces() {
     handleAPILoaded();
   });
 }
-
-gapi.client.setApiKey('AIzaSyCwHkgl9JNQSzRk-_Zr8U4cBKT_bNZZjto');
