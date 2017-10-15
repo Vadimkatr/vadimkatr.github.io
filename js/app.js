@@ -1,4 +1,6 @@
 function init() {
+  gapi.load('youtube', initClient);
+ 
   gapi.client.init({
     apiKey: API_KEY,
     discoveryDocs: DISCOVERY_DOCS,
@@ -27,8 +29,7 @@ function find() {
   /**
    *  On load, called to load the auth2 library and API client library.
    */
-  // gapi.load('youtube', initClient);
- 
+  
   // var request = gapi.client.youtube.search.list({
   //   part: "snippet",
   //   type: "video",
