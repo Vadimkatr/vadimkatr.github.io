@@ -1,6 +1,19 @@
 function init() {
-  gapi.load('youtube', initClient);
-
+  gapi.load('client', {
+    callback: function() {
+      // Handle gapi.client initialization.
+      initGapiClient();
+    },
+    onerror: function() {
+      // Handle loading error.
+      alert('gapi.client failed to load!');
+    },
+    timeout: 5000, // 5 seconds.
+    ontimeout: function() {
+      // Handle timeout.
+      alert('gapi.client could not load in a timely manner!');
+    }
+  });
   function initClient() {
     gapi.client.init({
       apiKey: API_KEY,
