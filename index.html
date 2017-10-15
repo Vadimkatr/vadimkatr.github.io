@@ -16,7 +16,7 @@
             <div class="col-md-6 col-md-offset-3">
                 <form action="#">
                     <input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" />
-                    <input type="submit"  value="Search" class="123"  onclick="find()">
+                    <input type="submit"  value="Search" class="123">
                     <pre id="content"></pre>
                 </form>
                 <div id="results"></div>
@@ -24,9 +24,7 @@
         </div>
      
         <!-- scripts -->
-        <script async defer src="https://apis.google.com/js/api.js" onload="find()">
-
-        </script>
+        <script async defer src="https://apis.google.com/js/api.js" onload="init()"></script>
 
         <script src="js/app.js"></script>
         </body>
