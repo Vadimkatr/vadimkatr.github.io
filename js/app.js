@@ -1,4 +1,9 @@
 function init() {
+  var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
+  var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
+  var CLIENT_ID = '693280105097-ia5aafc2ice8muahclms3q7gfkdufboh.apps.googleusercontent.com';
+  
+  var API_KEY = "AIzaSyCwHkgl9JNQSzRk-_Zr8U4cBKT_bNZZjto";
   gapi.load('client', {
     callback: function() {
       // Handle gapi.client initialization.
@@ -32,15 +37,7 @@ function find() {
     return;
   
   // Client ID and API key from the Developer Console
-  var CLIENT_ID = '693280105097-ia5aafc2ice8muahclms3q7gfkdufboh.apps.googleusercontent.com';
-  let API_KEY = "AIzaSyCwHkgl9JNQSzRk-_Zr8U4cBKT_bNZZjto";
-  // Array of API discovery doc URLs for APIs used by the quickstart
-  var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
-
-  // Authorization scopes required by the API. If using multiple scopes,
-  // separated them with spaces.
-  var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
-
+  
   /**
    *  On load, called to load the auth2 library and API client library.
    */
