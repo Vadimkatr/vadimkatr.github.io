@@ -28,7 +28,6 @@ function init() {
       clientId: CLIENT_ID,
 
     }).then(function () {
-      console.log('121212');
     });
   }
 }
@@ -47,6 +46,7 @@ function find() {
   });
   request.execute(function (response) {
     console.log(response);
+    console.log("1");
   })
   console.log('22222');
 
