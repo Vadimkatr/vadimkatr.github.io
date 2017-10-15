@@ -22,7 +22,7 @@ function find() {
    *  Initializes the API client library and sets up sign-in state
    *  listeners.
    */
-  function initClient(req) {
+  function initClient() {
     gapi.client.init({
       discoveryDocs: DISCOVERY_DOCS,
       clientId: CLIENT_ID
