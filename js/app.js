@@ -34,11 +34,11 @@ function find() {
   //   order: "veiwCount"
   // });
   console.log('22222');
-  
 
-  request.execute(function(response){
-    console.log(response);
-  })
+
+  // request.execute(function(response){
+  //   console.log(response);
+  // })
   /**
    *  Initializes the API client library and sets up sign-in state
    *  listeners.
