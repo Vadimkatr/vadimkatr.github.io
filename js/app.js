@@ -1,3 +1,10 @@
+function init(){
+  gapi.client.setApiKey(API_KEY);
+  gapi.client.load("youtube", "v3", function(){
+    //asd
+  });
+}
+
 function find() {
   let textReq = document.getElementById('search').value;
   if (textReq === '')
@@ -17,10 +24,7 @@ function find() {
    *  On load, called to load the auth2 library and API client library.
    */
   // gapi.load('youtube', initClient);
-  gapi.client.setApiKey(API_KEY);
-  gapi.client.load("youtube", "v3", function(){
-    //asd
-  });
+ 
   var request = gapi.client.youtube.search.list({
     part: "snippet",
     type: "video",
