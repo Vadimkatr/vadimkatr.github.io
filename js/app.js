@@ -16,8 +16,8 @@ function find() {
   /**
    *  On load, called to load the auth2 library and API client library.
    */
-  gapi.load('youtubeApiV2', initClient);
-  var request = gapi.client.youtubeApiV2.search.list({
+  gapi.load('youtube', initClient);
+  var request = gapi.client.youtube.search.list({
     part: "snippet",
     type: "video",
     q: textReq,
