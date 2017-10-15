@@ -25,13 +25,10 @@ function find() {
   function initClient() {
     gapi.client.init({
       discoveryDocs: DISCOVERY_DOCS,
-      clientId: CLIENT_ID
+      clientId: CLIENT_ID,
+      scope: request
     }).then(function () {
-      // Listen for sign-in state changes.
-      let request = document.getElementById('search').value;
-     search(request);
-      // Handle the initial sign-in state.
-    
+      search(this.scope);
     });
   }
 
