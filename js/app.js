@@ -14,9 +14,6 @@ function find() {
   // separated them with spaces.
   var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
-  var authorizeButton = document.getElementById('authorize-button');
-  var signoutButton = document.getElementById('signout-button');
-
   /**
    *  On load, called to load the auth2 library and API client library.
    */
@@ -31,32 +28,14 @@ function find() {
   function initClient() {
     gapi.client.init({
       discoveryDocs: DISCOVERY_DOCS,
-      clientId: CLIENT_ID,
-      scope: SCOPES
+      clientId: CLIENT_ID
     }).then(function () {
       // Listen for sign-in state changes.
       gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
       // Handle the initial sign-in state.
-      updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-      authorizeButton.onclick = handleAuthClick;
-      signoutButton.onclick = handleSignoutClick;
+    
     });
-  }
-
-  /**
-   *  Called when the signed in status changes, to update the UI
-   *  appropriately. After a sign-in, the API is called.
-   */
-  function updateSigninStatus(isSignedIn) {
-    if (isSignedIn) {
-      authorizeButton.style.display = 'none';
-      signoutButton.style.display = 'block';
-      getChannel();
-    } else {
-      authorizeButton.style.display = 'block';
-      signoutButton.style.display = 'none';
-    }
   }
 
   /**
