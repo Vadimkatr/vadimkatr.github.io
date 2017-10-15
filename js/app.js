@@ -14,7 +14,7 @@ function init() {
       alert('gapi.client could not load in a timely manner!');
     }
   });
-  function initClient() {
+  function initGapiClient() {
     gapi.client.init({
       apiKey: API_KEY,
       discoveryDocs: DISCOVERY_DOCS,
