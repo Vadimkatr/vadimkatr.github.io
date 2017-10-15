@@ -23,12 +23,12 @@ function find() {
    *  listeners.
    */
   function initClient() {
+    gapi.client.setApiKey('AIzaSyCwHkgl9JNQSzRk-_Zr8U4cBKT_bNZZjto');
     gapi.client.init({
       discoveryDocs: DISCOVERY_DOCS,
       clientId: CLIENT_ID,
-      scope: request
     }).then(function () {
-      search(this.scope);
+      search('c++');
     });
   }
 
