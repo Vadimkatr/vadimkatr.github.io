@@ -1,9 +1,12 @@
-function init(){
-  gapi.client.setApiKey(API_KEY);
-  gapi.client.load("youtube", "v3", function(){
-    //asd
+function initClient() {
+  gapi.client.init({
+    apiKey: API_KEY,
+    discoveryDocs: DISCOVERY_DOCS,
+    clientId: CLIENT_ID,
+
+  }).then(function () {
+    console.log('121212');
   });
-  console.log('111111');
 }
 
 function find() {
