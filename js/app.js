@@ -37,7 +37,7 @@ function find() {
       apiKey: API_KEY,
       discoveryDocs: DISCOVERY_DOCS,
       clientId: CLIENT_ID,
-      scope: SCOPES
+      
     }).then(function () {
      
     });
