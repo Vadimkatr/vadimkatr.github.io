@@ -1,9 +1,10 @@
 function init() {
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
   var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
-  var CLIENT_ID = '693280105097-ia5aafc2ice8muahclms3q7gfkdufboh.apps.googleusercontent.com';
+  var CLIENT_ID = "693280105097-cn4v71cefbt45ukuuj8jkfond5pn94up.apps.googleusercontent.com";
+  //HN0F8piNp_netYB2Yg08aIGa
   
-  var API_KEY = "AIzaSyCwHkgl9JNQSzRk-_Zr8U4cBKT_bNZZjto";
+  var API_KEY = "AIzaSyCoOzrCXAF-vUrznvIKVpuRKT2WoylVbk8";
   gapi.load('client', {
     callback: function() {
       // Handle gapi.client initialization.
