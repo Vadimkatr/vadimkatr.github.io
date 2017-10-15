@@ -1,4 +1,5 @@
 function init() {
+   // Client ID and API key from the Developer Console
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
   var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
   var CLIENT_ID = "693280105097-cn4v71cefbt45ukuuj8jkfond5pn94up.apps.googleusercontent.com";
@@ -36,20 +37,14 @@ function find() {
   let textReq = document.getElementById('search').value;
   if (textReq === '')
     return;
-  
-  // Client ID and API key from the Developer Console
-  
-  /**
-   *  On load, called to load the auth2 library and API client library.
-   */
-  
-  // var request = gapi.client.youtube.search.list({
-  //   part: "snippet",
-  //   type: "video",
-  //   q: textReq,
-  //   maxResult: 3,
-  //   order: "veiwCount"
-  // });
+
+  var request = gapi.client.youtube.search.list({
+    part: "snippet",
+    type: "video",
+    q: textReq,
+    maxResult: 3,
+    order: "veiwCount"
+  });
   console.log('22222');
 
 
