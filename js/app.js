@@ -1,14 +1,16 @@
 function init() {
   gapi.load('youtube', initClient);
- 
-  gapi.client.init({
-    apiKey: API_KEY,
-    discoveryDocs: DISCOVERY_DOCS,
-    clientId: CLIENT_ID,
 
-  }).then(function () {
-    console.log('121212');
-  });
+  function initClient() {
+    gapi.client.init({
+      apiKey: API_KEY,
+      discoveryDocs: DISCOVERY_DOCS,
+      clientId: CLIENT_ID,
+
+    }).then(function () {
+      console.log('121212');
+    });
+  }
 }
 
 function find() {
