@@ -5,7 +5,7 @@ function find() {
   
   // Client ID and API key from the Developer Console
   var CLIENT_ID = '693280105097-ia5aafc2ice8muahclms3q7gfkdufboh.apps.googleusercontent.com';
-  let API_KEY = 'AIzaSyCwHkgl9JNQSzRk-_Zr8U4cBKT_bNZZjto';
+  let API_KEY = "AIzaSyCwHkgl9JNQSzRk-_Zr8U4cBKT_bNZZjto";
   // Array of API discovery doc URLs for APIs used by the quickstart
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
 
@@ -16,7 +16,11 @@ function find() {
   /**
    *  On load, called to load the auth2 library and API client library.
    */
-  gapi.load('youtube', initClient);
+  // gapi.load('youtube', initClient);
+  gapi.client.setApiKey(API_KEY);
+  gapi.client.load("youtube", "v3", function(){
+    //asd
+  });
   var request = gapi.client.youtube.search.list({
     part: "snippet",
     type: "video",
@@ -32,16 +36,16 @@ function find() {
    *  Initializes the API client library and sets up sign-in state
    *  listeners.
    */
-  function initClient() {
-    gapi.client.init({
-      apiKey: API_KEY,
-      discoveryDocs: DISCOVERY_DOCS,
-      clientId: CLIENT_ID,
+  // function initClient() {
+  //   gapi.client.init({
+  //     apiKey: API_KEY,
+  //     discoveryDocs: DISCOVERY_DOCS,
+  //     clientId: CLIENT_ID,
       
-    }).then(function () {
+  //   }).then(function () {
      
-    });
-  }
+  //   });
+  // }
 
   function search(req) {
     var request = gapi.client.youtube.search.list({
