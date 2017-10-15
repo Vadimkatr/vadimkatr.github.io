@@ -16,13 +16,16 @@
             <div class="col-md-6 col-md-offset-3">
                 <form action="#">
                     <input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" />
-                    <input type="submit"  value="Search" class="form-control btn btn-primary w100">
+                    <input type="submit"  value="Search" class="123"  onclick="find()">
                 </form>
                 <div id="results"></div>
             </div>
         </div>
-        
-        <!-- scripts -->
+        <script>
+            function find() {
+                alert('12');
+            }
+        </script>      <!-- scripts -->
         <script src="https://apis.google.com/js/api.js" async defer></script>     
         <script src="js/app.js"></script>
      </body>
