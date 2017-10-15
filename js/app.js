@@ -1,4 +1,4 @@
-function initClient() {
+function init() {
   gapi.client.init({
     apiKey: API_KEY,
     discoveryDocs: DISCOVERY_DOCS,
