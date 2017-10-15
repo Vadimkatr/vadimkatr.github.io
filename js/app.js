@@ -3,6 +3,7 @@ function init(){
   gapi.client.load("youtube", "v3", function(){
     //asd
   });
+  console.log('111111');
 }
 
 function find() {
