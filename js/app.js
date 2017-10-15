@@ -16,7 +16,7 @@ function find() {
   /**
    *  On load, called to load the auth2 library and API client library.
    */
-  gapi.load('client:auth2', initClient(request));
+  gapi.load('client:auth2', initClient;
 
   /**
    *  Initializes the API client library and sets up sign-in state
@@ -28,7 +28,8 @@ function find() {
       clientId: CLIENT_ID
     }).then(function () {
       // Listen for sign-in state changes.
-     search(req);
+      let request = document.getElementById('search').value;
+     search(request);
       // Handle the initial sign-in state.
     
     });
