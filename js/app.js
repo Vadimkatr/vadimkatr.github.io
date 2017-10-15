@@ -45,12 +45,13 @@ function find() {
     maxResult: 3,
     order: "veiwCount"
   });
+  request.execute(function (response) {
+    console.log(response);
+  })
   console.log('22222');
 
 
-  // request.execute(function(response){
-  //   console.log(response);
-  // })
+ 
   /**
    *  Initializes the API client library and sets up sign-in state
    *  listeners.
