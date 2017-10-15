@@ -29,8 +29,7 @@ function find() {
       clientId: CLIENT_ID
     }).then(function () {
       // Listen for sign-in state changes.
-      gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
+     appendPre('lol');
       // Handle the initial sign-in state.
     
     });
