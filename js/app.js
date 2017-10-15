@@ -26,13 +26,15 @@ function find() {
    */
   // gapi.load('youtube', initClient);
  
-  var request = gapi.client.youtube.search.list({
-    part: "snippet",
-    type: "video",
-    q: textReq,
-    maxResult: 3,
-    order: "veiwCount"
-  });
+  // var request = gapi.client.youtube.search.list({
+  //   part: "snippet",
+  //   type: "video",
+  //   q: textReq,
+  //   maxResult: 3,
+  //   order: "veiwCount"
+  // });
+  console.log('22222');
+  
 
   request.execute(function(response){
     console.log(response);
