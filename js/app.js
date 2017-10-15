@@ -2,8 +2,7 @@ function find() {
   let request = document.getElementById('search').value;
   if (request === '')
     return;
-  alert(request);
-
+  
   // Client ID and API key from the Developer Console
   var CLIENT_ID = '693280105097-ia5aafc2ice8muahclms3q7gfkdufboh.apps.googleusercontent.com';
 
@@ -17,30 +16,44 @@ function find() {
   /**
    *  On load, called to load the auth2 library and API client library.
    */
-  gapi.load('client:auth2', initClient);
+  gapi.load('client:auth2', initClient(request));
 
   /**
    *  Initializes the API client library and sets up sign-in state
    *  listeners.
    */
-  function initClient() {
+  function initClient(req) {
     gapi.client.init({
       discoveryDocs: DISCOVERY_DOCS,
       clientId: CLIENT_ID
     }).then(function () {
       // Listen for sign-in state changes.
-     appendPre('lol');
+     search(req);
       // Handle the initial sign-in state.
     
     });
   }
 
+  function search(req) {
+    var request = gapi.client.youtube.search.list({
+      req: req,
+      part: 'snippet'
+    });
+  
+    request.execute(function(response) {
+      var str = JSON.stringify(response.result);
+     appendPre(str);
+    });
+  }
   /**
    * Append text to a pre element in the body, adding the given message
    * to a text node in that element. Used to display info from API response.
    *
    * @param {string} message Text to be placed in pre element.
    */
+
+
+
   function appendPre(message) {
     var pre = document.getElementById('content');
     var textContent = document.createTextNode(message + '\n');
