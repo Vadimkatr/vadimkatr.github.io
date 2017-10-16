@@ -44,8 +44,10 @@ function find() {
     maxResult: 3
   });
   request.execute(function (response) {
-    console.log(response);
-    console.log("1");
+   var results = response.result;
+   results.items.forEach(function(item, index) {
+     appendPre(item.id.videoId + " " + item.snippet.title + "/n");
+   }, this);
   })
   console.log('22222');
 
