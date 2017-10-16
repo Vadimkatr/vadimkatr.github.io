@@ -42,7 +42,7 @@ function find() {
     type: "video",
     q: textReq,
     maxResult: 3,
-    order: "veiwCount"
+    order: "veiwcount"
   });
   request.execute(function (response) {
     console.log(response);
