@@ -41,8 +41,7 @@ function find() {
     part: "snippet",
     type: "video",
     q: textReq,
-    maxResult: 3,
-    order: "veiwcount"
+    maxResult: 3
   });
   request.execute(function (response) {
     console.log(response);
