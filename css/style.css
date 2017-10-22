@@ -18,3 +18,15 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+.row {
+    overflow:hidden;
+    white-space:nowrap
+}
+.result {
+    border-radius: 10px;
+    display:inline-block;
+    margin: 50px;
+    width: 200px;
+    height: 420px;
+    border: 1px solid #fff;
+}

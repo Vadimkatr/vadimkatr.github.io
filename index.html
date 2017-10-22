@@ -2,27 +2,25 @@
 <html lang="en">
     <head>		
         <title>YouTube Search Api</title>
-        <meta charset="UTF-8" />					
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Awesome videos!" />
         <script async defer src="https://apis.google.com/js/api.js" onload="init()"></script>
         <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            
-        </header>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+        </head>
+
+        <body>
+            <div class="main">
+
                 <form action="#">
-                    <input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" />
-                    <input type="submit"  value="Search" class="123" onclick="find()">
-                    <pre id="content"></pre>
+                    <input type="text" id="search" onclick="find()" placeholder="Type something..." autocomplete="off" class="form-control" />
                 </form>
-                <div id="results"></div>
+                <!--<div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>-->
+
             </div>
-        </div>
-     
         <!-- scripts -->
         
 

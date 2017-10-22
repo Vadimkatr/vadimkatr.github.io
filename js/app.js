@@ -46,27 +46,17 @@ function find() {
   request.execute(function (response) {
    var results = response.result;
    results.items.forEach(function(item, index) {
-     appendPre(item.id.videoId + " " + item.snippet.title + "/n");
+    var element = document.createElement("div", {
+      id: "element",
+      class: "result",
+      innerHTML: item.id.videoId + " " + item.snippet.title + "/n",
+     });
+    let mainDiv = document.getElementById("main");
+    mainDiv.appendChild(element);
    }, this);
   })
-  console.log('22222');
-
 
  
-  /**
-   *  Initializes the API client library and sets up sign-in state
-   *  listeners.
-   */
-  // function initClient() {
-  //   gapi.client.init({
-  //     apiKey: API_KEY,
-  //     discoveryDocs: DISCOVERY_DOCS,
-  //     clientId: CLIENT_ID,
-      
-  //   }).then(function () {
-     
-  //   });
-  // }
 
   function search(req) {
     var request = gapi.client.youtube.search.list({
